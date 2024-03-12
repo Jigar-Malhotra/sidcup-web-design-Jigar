@@ -1,0 +1,373 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  object-fit: cover;
+}
+
+.video video {
+  width: 100%;
+}
+
+#cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #95c11e;
+  transition: all 0.3s cubic-bezier(0, 0, 0, 0);
+  z-index: 2;
+}
+
+#cursor-blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  background-color: #95c11e;
+  transition: all 0.3s cubic-bezier();
+  z-index: 2;
+  /* z-index: 0; */
+  filter: blur(200px);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  /* background-color: red; */
+  height: 10vh;
+  text-transform: uppercase;
+  /* font-family: "gilroy"; */
+  padding: 25px 140px;
+  gap: 35px;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  cursor: default;
+}
+
+nav h4{
+  transition: all 0.3s ease-in;
+}
+
+nav h4:hover{
+  cursor: pointer;
+  color: wheat;
+}
+
+nav img {
+  height: 4.5vw;
+  /* width: 200px; */
+}
+
+main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* z-index: 2; */
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.565);
+}
+
+#page1 {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  z-index: 2;
+  position: relative;
+}
+
+h1 {
+  font-size: 100px;
+  position: relative;
+}
+
+h1::before {
+  content: "EAT. DRINK. PLAY.";
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  color: black;
+  -webkit-text-stroke: 2px #95c11e;
+  z-index: -2;
+}
+
+#page1 h2 {
+  font-size: 33px;
+}
+
+#page1 div {
+  /* width: 200px; */
+  text-align: center;
+  max-width: 40%;
+  font-size: 17px;
+}
+
+#page2 {
+  min-height: 100vh;
+  width: 100%;
+  z-index: 3;
+  position: relative;
+}
+
+#scroll h4 {
+  text-transform: uppercase;
+  color: transparent;
+  font-size: 85px;
+  /* white-space: wrap; */
+  display: inline-block;
+  -webkit-text-stroke: 2px #95c11e;
+  margin: 0 12px;
+  transition: all 0.5s ease-in-out;
+}
+
+#scroll h4:hover {
+  color: #95c11e;
+}
+
+#scroll {
+  white-space: nowrap;
+  overflow-y: hidden;
+  overflow-x: auto;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  /* animation: scroll 15s linear infinite; */
+}
+
+#scroll::-webkit-scrollbar {
+  display: none;
+}
+
+#scroll div {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll 30s linear infinite;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+#about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+  margin: 30px 30px;
+}
+
+#about img {
+  height: 320px;
+  border-radius: 33px;
+  border: 2px solid #95c11e;
+  width: 270px;
+  object-fit: cover;
+}
+
+#aboutus {
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 34px;
+}
+
+#aboutus p {
+  text-align: center;
+}
+
+#aboutus h3 {
+  font-size: 45px;
+}
+
+/* Cards */
+
+#cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 45px;
+  margin: 85px 20px;
+}
+
+.card {
+  height: 370px;
+  width: 320px;
+  /* object-fit: cover; */
+  background-size: cover;
+  overflow: hidden;
+  border-radius: 27px;
+  border: 2px solid #95c11e;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+}
+
+#card1 {
+  /* background-image: url("card1.avif"); */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("card1.avif");
+  /* transform: perspective(500px) translate3d(100px, 10px, 0px); */
+}
+
+#card1:hover{
+    transform: rotate3d(1, 1, 0, 20deg);
+}
+
+#card2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url("card2.webp");
+}
+
+#card2:hover{
+    transform: rotate3d(0, 0, 1, 20deg);
+}
+
+#card3 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url("card3.avif");
+}
+
+#card3:hover{
+    transform: rotate3d(-1, 1, 0, 20deg);
+}
+
+.c-head {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 1;
+  font-size: 33px;
+}
+
+.overflow {
+  /* color: black; */
+  background-color: #95c11e;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding-left: 20px;
+  /* padding-right: 20px; */
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  white-space: wrap;
+  /* padding-top: 33%; */
+  opacity: 0;
+  transition: all 0.4s ease-in;
+  z-index: 2;
+}
+
+.overflow p {
+  max-width: 92%;
+  color: black;
+}
+
+.overflow h4 {
+  color: black;
+  font-size: 33px;
+}
+
+.overflow:hover {
+  opacity: 1;
+}
+
+#signup img {
+  /* height: 100px; */
+  width: 20%;
+}
+
+#signup {
+  display: flex;
+  height: 150px;
+  overflow: hidden;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 10%;
+  background: linear-gradient(to left bottom, #119f3a, #ace022);
+}
+
+#signup h3 {
+  font-size: 30px;
+  color: black;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* responsiveness */
+
+@media screen and (max-width: 1103px){
+  h1{
+    font-size: 50px;
+  }
+  #page1 h2{
+    font-size: 22px;
+  }
+  #page1 div{
+    font-size: 16px;
+  }
+
+  #ham div{
+    width: 100%;
+    height: 3px;
+    background-color: white;
+  }
+  #ham{
+    width: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    position: absolute;
+    right: 33px;
+  }
+  nav h4{
+    display: none;
+  }
+  nav{
+    /* width: 100%; */
+    /* justify-content: space-between; */
+    position: relative;
+    padding-right: 33px;
+    /* gap: 74%; */
+  }
+  main{
+    width: 100%;
+  }
+}
